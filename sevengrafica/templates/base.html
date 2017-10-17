@@ -1,0 +1,15 @@
+{% load staticfiles %}<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Seven gráfica{% endblock %}</title>
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+  {% block stylesheet %}{% endblock %}
+</head>
+<body>
+  {% block content %}{% endblock %}
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.2.1.min' %}"></script>
+</body>
+</html>

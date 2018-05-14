@@ -1,0 +1,39 @@
+{% extends "newsletter/common.html" %}
+
+{% load i18n %}
+
+{% block title %}Newsletter unsubscribe - Desativando{% endblock title %}
+
+{% block content %}
+<div class="container py-3">
+    <h1 class="py-5 text-center">Newsletter unsubscribe {{ newsletter.title }} - Desativando</h1>
+
+    {% if error %}
+        <p class="text-center">{% trans "Due to a technical error we were not able to submit your confirmation email. This could be because your email address is invalid." %}</p>
+
+        {% comment %} Replace the the following dummy with a valid email address and remove this comment.
+
+            <p class="text-center">{% trans "If the error persists, please don't hesitate to contact us at the following email address:" %} <a href="mailto:nathaliesn.seven@gmail.com">nathaliesn.seven@gmail.com</a></p>
+
+        {% endcomment %}
+    {% else %}
+        <!-- {{ form.non_field_errors }} -->
+        <form class="form-group" enctype="multipart/form-data" method="post" action=".">
+            {% csrf_token %}
+            <div class="d-flex justify-content-center">
+                <div class="form-group col-10 mb-2">
+                    {% if form.email_field.value %}
+                        <input class="form-control form-control-lg" type="email" placeholder="E-mail" name="email_field" required="" class="form-control" id="id_email_field" value="{{ form.email_field.value }}" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">{{ form.email_field.errors.as_text }}</small>
+                    {% else %}
+                        <input class="form-control form-control-lg" type="email" placeholder="E-mail" name="email_field" required="" class="form-control" id="id_email_field">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-white col-5" id="id_submit" name="submit" value="Unsubscribe">Unsubscribe</button>
+            </div>
+        </form>
+    {% endif %}
+</div>
+{% endblock content %}

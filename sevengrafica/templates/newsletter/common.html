@@ -5,7 +5,7 @@
     <!-- Metas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
-    <title>{{ nome }} | {% block title %}{{ section.title }}{% endblock %}</title>
+    <title>Seven Gráfica | {% block title %}{{ section.title }}{% endblock %}</title>
     <meta name="description" content="A mais nova gráfica rápida da Baixada Santista! Tudo que você precisa para divulgar sua marca e sair na frente da concorrência!">
     <meta name="author" content="Willtrigo">
     <!-- CSS -->
@@ -20,7 +20,7 @@
     {% include 'includes/header.html' %}    <main role="main" class="pb-3">
       {% block content %}{% endblock %}
     </main>
-    {% include 'includes/footer.html' %}    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>{% block stylejs %}{% endblock %}
+    {% include 'includes/footer.html' with nome='Seven Gráfica'%}    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>{% block stylejs %}{% endblock %}
     <script src="{% static 'js/jarallax.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>

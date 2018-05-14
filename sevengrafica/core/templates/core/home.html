@@ -1,4 +1,147 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %}{% load staticfiles %}
+{% block title %}Home{% endblock title %}
+{% block stylesheet %}
+    <link href="{% static 'css/siema-fullscreen.css' %}" rel="stylesheet">
+    <link href="{% static 'css/siema-elements.css' %}" rel="stylesheet">
+    <link href="{% static 'css/cases.css' %}" rel="stylesheet">
+    <link href="{% static 'css/lightgallery.css' %}" rel="stylesheet">{% endblock %}
 {% block content %}
-<h1>Seven gráfica</h1>
+<div class="container-fluid m-0 p-0">
+  <div class="d-flex flex-row justify-content-center">
+    <div class="container-fluid m-0 p-0">
+      <div class="siemafullscreen" arrow='true' pagination='true' timer='true' settimer='3000'>
+        <div class="image-siemaf">
+          <img src={% static 'img/img.top.png' %}>
+        </div>
+        <div class="image-siemaf">
+          <img src={% static 'img/img.top.png' %}>
+        </div>
+        <div class="image-siemaf">
+          <img src={% static 'img/img.top.png' %}>
+        </div>
+        <div class="image-siemaf">
+          <img src={% static 'img/img.top.png' %}>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center py-3">
+  <h2 class="display-5">Cases recentes</h2>
+</div>
+<div class="container-fluid m-0 p-0">
+
+  <div class="d-flex flex-wrap text-center" id="gallery">
+
+    {% for case in cases %}
+    <div class="col-lg-4 col-md-6 col-xs-12 m-0 p-0">
+      <div class="card" data-src={{ case.image.url }} data-sub-html="<h4>{{ case.name }}</h4><p>{{ case.description }}</p>">
+        <a href="#" class="text-dark img-cases">
+          <img class="card-img-top" src={{ case.image.url }} alt={{ case.name }}>
+          <div class="card-body">
+            <p class="card-text">{{ case.name }}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    {% empty %}
+    <div class="container py-5 col-12 text-center">
+      <h2>Cases estão indisponível no momento</h2>
+    </div>
+    {% endfor %}
+
+  </div>
+
+</div>
+
+<div class="container text-center py-3">
+  <h2 class="display-5 pb-3">Nossos clientes</h2>
+</div>
+<div class="container-fluid m-0 p-0 pb-3">
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <div class="col-10 order-1 m-0 p-0">
+      <div class="siemaelements" arrow='true' pagination='true' timer='true' settimer='3000' resolution='3-2'>
+        <div class="element-siema d-flex flex-column align-items-center justify-content-center">
+          <div class="text-center mb-2 text-muted">
+            <i class="fas fa-quote-left fa-3x"></i>
+          </div>
+          <div class="text-center">
+            <img src={% static 'img/seven.png' %} width="90" class="rounded-circle mx-auto mb-3">
+          </div>
+          <blockquote class="blockquote text-center">
+            <p class="h3 mb-2"><strong>Amo o trabalho de vocês!</strong></p>
+            <p class="h5 pb-3mb-0 mx-3"><small>Amo o trabalho de vocês! Acho incrível a personalidade junto a criatividade! Artes limpas e do jeitinho que o cliente precisa e na medida certa! Sucesso sempre!</small></p>
+            <footer class="blockquote-footer">Cliente <cite title="Source Title">Daniel trigo</cite></footer>
+          </blockquote>
+        </div>
+        <div class="element-siema d-flex flex-column align-items-center justify-content-center">
+          <div class="text-center mb-2 text-muted">
+            <i class="fas fa-quote-left fa-3x"></i>
+          </div>
+          <div class="text-center">
+            <img src={% static 'img/seven.png' %} width="90" class="rounded-circle mx-auto mb-3">
+          </div>
+          <blockquote class="blockquote text-center">
+            <p class="h3 mb-2"><strong>Amo o trabalho de vocês!</strong></p>
+            <p class="h5 pb-3mb-0 mx-3"><small>Amo o trabalho de vocês! Acho incrível a personalidade junto a criatividade! Artes limpas e do jeitinho que o cliente precisa e na medida certa! Sucesso sempre!</small></p>
+            <footer class="blockquote-footer">Cliente <cite title="Source Title">Daniel trigo</cite></footer>
+          </blockquote>
+        </div>
+        <div class="element-siema d-flex flex-column align-items-center justify-content-center">
+          <div class="text-center mb-2 text-muted">
+            <i class="fas fa-quote-left fa-3x"></i>
+          </div>
+          <div class="text-center">
+            <img src={% static 'img/seven.png' %} width="90" class="rounded-circle mx-auto mb-3">
+          </div>
+          <blockquote class="blockquote text-center">
+            <p class="h3 mb-2"><strong>Amo o trabalho de vocês!</strong></p>
+            <p class="h5 pb-3mb-0 mx-3"><small>Amo o trabalho de vocês! Acho incrível a personalidade junto a criatividade! Artes limpas e do jeitinho que o cliente precisa e na medida certa! Sucesso sempre!</small></p>
+            <footer class="blockquote-footer">Cliente <cite title="Source Title">Daniel trigo</cite></footer>
+          </blockquote>
+        </div>
+        <div class="element-siema d-flex flex-column align-items-center justify-content-center">
+          <div class="text-center mb-2 text-muted">
+            <i class="fas fa-quote-left fa-3x"></i>
+          </div>
+          <div class="text-center">
+            <img src={% static 'img/seven.png' %} width="90" class="rounded-circle mx-auto mb-3">
+          </div>
+          <blockquote class="blockquote text-center">
+            <p class="h3 mb-2"><strong>Amo o trabalho de vocês!</strong></p>
+            <p class="h5 pb-3 mb-0 mx-3"><small>Amo o trabalho de vocês! Acho incrível a personalidade junto a criatividade! Artes limpas e do jeitinho que o cliente precisa e na medida certa! Sucesso sempre!</small></p>
+            <footer class="blockquote-footer">Cliente <cite title="Source Title">Daniel trigo</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="m-0 p-0 bg-secondary">
+  <div class="container py-3">
+    <form class="form-row" enctype="multipart/form-data" method="post" action="newsletter/seven-grafica/subscribe/">
+      {% csrf_token %}
+      <div class="col-5 mb-2">
+        <input class="form-control form-control-lg" type="name" placeholder="Nome" name="name_field" required="" class="form-control" id="id_name_field">
+      </div>
+      <div class="col-5 mb-2">
+        <input class="form-control form-control-lg" type="email" placeholder="E-mail" name="email_field" required="" class="form-control" id="id_email_field">
+      </div>
+      <button type="submit" class="btn btn-white col-2 mb-2" id="id_submit" name="submit" value="Subscribe">Subscribe</button>
+    </form>
+  </div>
+</div>
+
 {% endblock content %}
+{% block stylejs %}
+    <script src="{% static 'js/lightgallery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+    <script src="{% static 'js/lg-zoom.min.js' %}"></script>
+    <script src="{% static 'js/lightgallery-elements.js' %}"></script>
+    <script src="{% static 'js/siema.min.js' %}"></script>
+    <script src="{% static 'js/siema-fullscreen.js' %}"></script>
+    <script src="{% static 'js/siema-elements.js' %}"></script>{% endblock %}

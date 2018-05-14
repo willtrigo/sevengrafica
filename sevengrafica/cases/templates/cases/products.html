@@ -1,0 +1,56 @@
+{% extends 'base.html' %}{% load staticfiles %}
+{% block title %}Cases - {{ product.name }}{% endblock title %}
+{% block stylesheet %}
+    <link href="{% static 'css/cases.css' %}" rel="stylesheet">
+    <link href="{% static 'css/lightgallery.css' %}" rel="stylesheet">{% endblock %}
+{% block content %}<div data-jarallax data-img-position="center 80%" data-speed="0" class="jumbotron mb-0">
+        <img class="jarallax-img" src={% static 'img/img.top.png' %} alt="">
+        <div class="container-fluid">
+          <div class="row flex-xl-nowrap">
+            <div class="col-12 bd-sidebar text-secondary">
+
+                  <h1 class="display-4 p-0 m-0">{{ product.name }}</h1>
+                  <hr class="h-5 bg-secondary p-0">
+                  <p class="lead p-0"><small>{{ product.description }}</small></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="{% url 'cases:cases' %}">
+        <div class="back-case fa-2x d-flex align-items-center justify-content-center">
+          <i class="fas fa-reply fa-inverse"></i>
+        </div>
+      </a>
+
+      <div class="container-fluid m-0 p-0">
+
+        <div class="d-flex flex-wrap text-center" id="gallery">
+
+          {% for product in all_products %}
+          <div class="col-lg-4 col-md-6 col-xs-12 m-0 p-0">
+            <div class="card" data-src={{ product.image.url }} data-sub-html="<h4>{{ product.name }}</h4><p>{{ product.description }}</p>">
+              <a href="#" class="text-dark img-cases">
+                <img class="card-img-top" src={{ product.image.url }} alt={{ product.name }}>
+                <div class="card-body">
+                  <p class="card-text">{{ product.name }}</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          {% empty %}
+          <div class="container py-5 col-12 text-center">
+            <h2>Produto está indisponível no momento</h2>
+          </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+      {% endblock content %}
+{% block stylejs %}
+    <script src="{% static 'js/lightgallery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+    <script src="{% static 'js/lg-zoom.min.js' %}"></script>
+    <script src="{% static 'js/lightgallery-elements.js' %}"></script>{% endblock %}

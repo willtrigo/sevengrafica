@@ -21,8 +21,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sevengrafica.core'
+    'django.contrib.sites',
+    'sevengrafica.core',
+    'sevengrafica.cases',
+    'sorl.thumbnail',
+    'tinymce',
+    'newsletter',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -99,3 +106,12 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = PROJECT_DIR.child('static').child('img').child('media')
+
+# newsletter
+NEWSLETTER_CONFIRM_EMAIL = False
+
+# Using django-tinymce
+NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"

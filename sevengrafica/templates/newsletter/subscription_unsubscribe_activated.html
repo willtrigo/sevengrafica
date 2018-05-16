@@ -1,0 +1,12 @@
+{% extends "newsletter/common.html" %}
+
+{% load i18n %}
+
+{% block title %}Newsletter unsubscribe - Desativado{% endblock title %}
+
+{% block content %}
+<div class="container py-3">
+    <h1 class="py-5 text-center">Newsletter unsubscribe {{ newsletter.title }} - Desativado</h1>
+    <p class="text-center">{% trans "You have successfully been unsubscribed." %}</p>
+</div>
+{% endblock content %}

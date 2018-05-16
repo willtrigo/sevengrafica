@@ -1,0 +1,12 @@
+{% extends "newsletter/common.html" %}
+
+{% load i18n %}
+
+{% block title %}Newsletter subscribe{% endblock title %}
+
+{% block content %}
+<div class="container py-3">
+    <h1 class="py-5 text-center">Newsletter subscribe {{ newsletter.title }}</h1>
+    <p class="text-center">{% trans "Your subscription request was successfully received and an activation email has been sent to you. In that email you will find a link which you need to follow in order to activate your subscription." %}</p>
+</div>
+{% endblock content %}

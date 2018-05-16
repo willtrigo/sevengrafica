@@ -1,0 +1,22 @@
+{% load staticfiles %}<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bg-navbar">
+      <a class="navbar-brand mr-0 mr-md-2 py-2" href="/" aria-label="SevenGrafica">
+        <img src={% static 'img/seven.logo.png' %} height=40 alt="Seven Gráfica"/>
+      </a>
+      <ul class="navbar-nav flex-row ml-md-auto">
+        <li class="nav-item {{ activehome }}">
+          <a href="/" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item {{ activesobrenos }}">
+          <a href="{% url 'aboutus' %}" class="nav-link">Sobre nós</a>
+        </li>
+        <li class="nav-item {{ activecases }}">
+          <a href="{% url 'cases:cases' %}" class="nav-link">Cases</a>
+        </li>
+        <li class="nav-item {{ activeclientes }}">
+          <a href="{% url 'clients' %}" class="nav-link">Clientes</a>
+        </li>
+        <li class="nav-item {{ activecontato }}">
+          <a href="{% url 'contact' %}" class="nav-link">Contato</a>
+        </li>
+      </ul>
+    </header>

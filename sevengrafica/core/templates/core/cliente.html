@@ -1,0 +1,123 @@
+{% extends 'base.html' %}{% load staticfiles %}
+{% block title %}Clientes{% endblock title %}
+{% block stylesheet %}
+    <link href="{% static 'css/siema-elements.css' %}" rel="stylesheet">{% endblock %}
+{% block content %}<div data-jarallax data-img-position="center 80%" data-speed="0" class="jumbotron">
+        <img class="jarallax-img" src={% static 'img/img.top.png' %} alt="">
+        <div class="container-fluid">
+          <div class="row flex-xl-nowrap">
+            <div class="col-12 bd-sidebar text-secondary">
+
+                  <h1 class="display-4 p-0 m-0">Clientes</h1>
+                  <hr class="h-5 bg-secondary p-0">
+                  <p class="lead p-0"><small>Venha você também ser nosso cliente</small></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center py-3">
+        <h2 class="display-5 pb-3">Clientes, amigos e parceiros! Nossa maior conquista.</h2>
+        <p>O que é mais importante do que manter bons relacionamentos? Comprometimento, transparência, competência e profissionalismo são valores que estão em nosso dna.</p>
+      </div>
+
+      <hr class="h-2 bg-secondary mx-5">
+
+      <div class="container-fluid m-0 p-0">
+        <div class="d-flex flex-row flex-wrap justify-content-center">
+          <div class="col-10 order-1 m-0 p-0">
+            <div class="siemaelements" arrow='true' pagination='true' timer='true' settimer='3000' resolution='3-2'>
+              <div class="element-siema d-flex flex-column align-items-center justify-content-center">
+                <div class="text-center mb-2 text-muted">
+                  <i class="fas fa-quote-left fa-3x"></i>
+                </div>
+                <div class="text-center">
+                  <img src={% static 'img/seven.png' %} width="90" class="rounded-circle mx-auto mb-3">
+                </div>
+                <blockquote class="blockquote text-center">
+                  <p class="h3 mb-2"><strong>Amo o trabalho de vocês!</strong></p>
+                  <p class="h5 pb-3mb-0 mx-3"><small>Amo o trabalho de vocês! Acho incrível a personalidade junto a criatividade! Artes limpas e do jeitinho que o cliente precisa e na medida certa! Sucesso sempre!</small></p>
+                  <footer class="blockquote-footer">Cliente <cite title="Source Title">Daniel trigo</cite></footer>
+                </blockquote>
+              </div>
+              <div class="element-siema d-flex flex-column align-items-center justify-content-center">
+                <div class="text-center mb-2 text-muted">
+                  <i class="fas fa-quote-left fa-3x"></i>
+                </div>
+                <div class="text-center">
+                  <img src={% static 'img/seven.png' %} width="90" class="rounded-circle mx-auto mb-3">
+                </div>
+                <blockquote class="blockquote text-center">
+                  <p class="h3 mb-2"><strong>Amo o trabalho de vocês!</strong></p>
+                  <p class="h5 pb-3mb-0 mx-3"><small>Amo o trabalho de vocês! Acho incrível a personalidade junto a criatividade! Artes limpas e do jeitinho que o cliente precisa e na medida certa! Sucesso sempre!</small></p>
+                  <footer class="blockquote-footer">Cliente <cite title="Source Title">Daniel trigo</cite></footer>
+                </blockquote>
+              </div>
+              <div class="element-siema d-flex flex-column align-items-center justify-content-center">
+                <div class="text-center mb-2 text-muted">
+                  <i class="fas fa-quote-left fa-3x"></i>
+                </div>
+                <div class="text-center">
+                  <img src={% static 'img/seven.png' %} width="90" class="rounded-circle mx-auto mb-3">
+                </div>
+                <blockquote class="blockquote text-center">
+                  <p class="h3 mb-2"><strong>Amo o trabalho de vocês!</strong></p>
+                  <p class="h5 pb-3mb-0 mx-3"><small>Amo o trabalho de vocês! Acho incrível a personalidade junto a criatividade! Artes limpas e do jeitinho que o cliente precisa e na medida certa! Sucesso sempre!</small></p>
+                  <footer class="blockquote-footer">Cliente <cite title="Source Title">Daniel trigo</cite></footer>
+                </blockquote>
+              </div>
+              <div class="element-siema d-flex flex-column align-items-center justify-content-center">
+                <div class="text-center mb-2 text-muted">
+                  <i class="fas fa-quote-left fa-3x"></i>
+                </div>
+                <div class="text-center">
+                  <img src={% static 'img/seven.png' %} width="90" class="rounded-circle mx-auto mb-3">
+                </div>
+                <blockquote class="blockquote text-center">
+                  <p class="h3 mb-2"><strong>Amo o trabalho de vocês!</strong></p>
+                  <p class="h5 pb-3 mb-0 mx-3"><small>Amo o trabalho de vocês! Acho incrível a personalidade junto a criatividade! Artes limpas e do jeitinho que o cliente precisa e na medida certa! Sucesso sempre!</small></p>
+                  <footer class="blockquote-footer">Cliente <cite title="Source Title">Daniel trigo</cite></footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="h-2 bg-secondary mx-5">
+
+      <div class="container text-center py-3">
+        <h2 class="display-5 pb-3">Gostaríamos muito da sua avaliação! Avalie nosso trabalho em nossa fanpage.</h2>
+        <p>Para nós é muito importante o seu feedback. Estamos sempre em busca de crescimento. Acesse: Facebook Avaliação</p>
+      </div>
+
+      <hr class="h-2 bg-secondary mx-5">
+
+      <div class="container-fluid m-0 p-0 pb-3">
+        <div class="d-flex flex-row flex-wrap justify-content-center">
+          <div class="col-10 order-1 m-0 p-0">
+            <div class="siemaelements" arrow='true' pagination='false' timer='true' settimer='3000' resolution='5-3'>
+              <div class="element-siema d-flex align-items-center justify-content-center">
+                <img src={% static 'img/logo.webp' %}>
+              </div>
+              <div class="element-siema d-flex align-items-center justify-content-center">
+                <img src={% static 'img/logo2.webp' %}>
+              </div>
+              <div class="element-siema d-flex align-items-center justify-content-center">
+                <img src={% static 'img/logo.webp' %}>
+              </div>
+              <div class="element-siema d-flex align-items-center justify-content-center">
+                <img src={% static 'img/logo2.webp' %}>
+              </div>
+              <div class="element-siema d-flex align-items-center justify-content-center">
+                <img src={% static 'img/logo2.webp' %}>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endblock content %}
+{% block stylejs %}
+    <script src="{% static 'js/siema.min.js' %}"></script>
+    <script src="{% static 'js/siema-elements.js' %}"></script>{% endblock %}

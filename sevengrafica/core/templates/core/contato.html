@@ -1,0 +1,83 @@
+{% extends 'base.html' %}{% load staticfiles %}
+{% block title %}Contato{% endblock title %}
+{% block stylesheet %}{% endblock %}
+{% block content %}<div data-jarallax data-img-position="center 80%" data-speed="0" class="jumbotron">
+        <img class="jarallax-img" src={% static 'img/img.top.png' %} alt="">
+        <div class="container-fluid">
+          <div class="row flex-xl-nowrap">
+            <div class="col-12 bd-sidebar text-secondary">
+
+                  <h1 class="display-4 p-0 m-0">Contato</h1>
+                  <hr class="h-5 bg-secondary p-0">
+                  <p class="lead p-0"><small>Será um prazer atendê-lo!</small></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center py-3">
+        <h2 class="display-5 pb-3">Conte com a gente. Estamos sempre em busca de novos desafios.</h2>
+        <p>Não tenha medo de perguntar, sinta-se a vontade para entrar em contato, contar seu problema, suas ideias e vamos juntos, começar uma parceria promissora.</p>
+      </div>
+
+      <hr class="h-2 bg-secondary mx-5">
+
+      <div class="container pt-3">
+        <div class="row">
+          <div class="col-sm-12 col-lg-6 py-3">
+            <div class="row">
+              <div class="col-2 d-flex justify-content-end">
+                <span class="fa-stack fa-2x">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
+                </span>
+              </div>
+              <div class="col-10 text-xs-center align-middle text-md-left py-2">
+                <h4><strong>Endereço</strong></h4>
+                <p>Rua Alexandre Martins, 111 - Loja 25 | Santos - SP</p>
+              </div>
+              <div class="col-2 d-flex justify-content-end">
+                <span class="fa-stack fa-2x">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-comment fa-stack-1x fa-inverse"></i>
+                </span>
+              </div>
+              <div class="col-10 text-xs-center align-middle text-md-left py-2">
+                <h4><strong>Telefone</strong></h4>
+                <p>(13) 3040-2193 | (13) 99626-7575 | (13) 99601-4140</p>
+              </div>
+              <div class="col-2 d-flex justify-content-end">
+                <span class="fa-stack fa-2x">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+              </div>
+              <div class="col-10 text-xs-center align-middle text-md-left py-2">
+                <h4><strong>Contato</strong></h4>
+                <p>nathaliesn.seven@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="col-sm-12 p-0">
+              <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.5781621828705!2d-46.31218708440361!3d-23.975352582897063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce024f49dcd89b%3A0xba373b588aa41ad4!2sR.+Alexandre+Martins%2C+111+-+Aparecida%2C+Santos+-+SP%2C+11025-202!5e0!3m2!1sen!2sbr!4v1513779399013" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="col-sm-12 d-lg-none">
+            <hr class="h-2 bg-secondary mx-5">
+          </div>
+
+          <div class="col-sm-12 col-lg-6 pt-3 pb-3">
+            <h2 class="display-5 pb-3">Preencha o formulário, entraremos em contato o mais breve possível.</h2>
+            <form class="form-group">
+              <input type="nome" class="form-control my-3" id="inputcontato" placeholder="Seu nome" required>
+              <input type="email" class="form-control my-3" id="inputemail" placeholder="Seu e-mail" required>
+              <input type="telefone" class="form-control my-3" id="inputtelefone" placeholder="Seu telefone" required>
+              <textarea class="form-control my-3" id="inputmensagem" rows="15" placeholder="Sua mensagem" required></textarea>
+              <button class="btn col-md-2 col-sm-6 btn-lg btn-dark btn-block" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>{% endblock content %}
+{% block stylejs %}{% endblock %}

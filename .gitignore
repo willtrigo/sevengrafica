@@ -7,10 +7,10 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-bin/
-include/
-lib/
-lib64/
+bin
+include
+lib
+lib64
 
 # Installer logs
 pip-log.txt

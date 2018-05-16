@@ -3,10 +3,10 @@ __pycache__/
 *.py[cod]
 
 # Distribution / packaging
-bin/
-include/
-lib/
-lib64/
+bin
+include
+lib
+lib64
 pip-selfcheck.json
 
 .env

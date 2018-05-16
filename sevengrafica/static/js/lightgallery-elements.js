@@ -1,3 +1,0 @@
-$('#gallery').lightGallery({
-  selector: '.card'
-});

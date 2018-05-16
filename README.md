@@ -1,2 +1,1 @@
-# sevengrafica
-========
+# Seven Gráfica
